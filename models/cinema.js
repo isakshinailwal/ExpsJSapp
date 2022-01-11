@@ -21,10 +21,10 @@ const cinemaSchema=new mongoose.Schema({
         required:true
     },
     movies:[{
-        MovieID:{
+        movieID:{
             type:String 
         },
-        Slot:[{
+        slot:[{
             type:String 
         }]
     }],

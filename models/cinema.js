@@ -1,5 +1,5 @@
-const mongoose=require("mongoose");
-
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 const cinemaSchema=new mongoose.Schema({
     cinemaName:{
         type:String,
@@ -20,15 +20,10 @@ const cinemaSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    movies:[{
-        movieID:{
-            type:String 
-        },
-        slot:[{
-            type:String 
-        }]
+    slots:[{
+        type:Schema.Types.ObjectId,
+        ref:"Slot"
     }],
-
     slot:{
         type:[String],
         required:true
@@ -36,4 +31,4 @@ const cinemaSchema=new mongoose.Schema({
 
 })
 
-module.exports=new mongoose.model("Cinema",cinemaSchema,"Cinemas");
+module.exports = new mongoose.model("Cinema",cinemaSchema,"Cinemas");

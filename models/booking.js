@@ -1,17 +1,19 @@
-const mongoose=require("mongoose");
-const cinemaSchema = require('./cinema');
+const mongoose=require('mongoose');
+const { Schema } = mongoose;
+const cinemaSchema = require("./cinema");
+
 const bookingSchema=new mongoose.Schema({
-    cinemaID:{
-        type:String,
-        ref:cinemaSchema 
-    },
+    cinema:[{ 
+        type: Schema.Types.ObjectId, 
+        ref: 'Cinema'
+    }],
     name:{
         type:String,
         required:true
     },
     email:{
         type:String,
-        required:true
+        required:true 
     },
     mobile:{
         type:String,
@@ -19,7 +21,7 @@ const bookingSchema=new mongoose.Schema({
     },
     seats:{
         type:[String],
-        required:true
+        required:true 
     },
     date:{
         type:Date,
@@ -27,13 +29,11 @@ const bookingSchema=new mongoose.Schema({
     },
     movieID:{
         type:String,
-        required:true
-    },
+        required:true },
     slot:{
         type:String,
         required:true
     }
-    
     
 });
 

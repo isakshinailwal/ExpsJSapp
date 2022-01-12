@@ -1,38 +1,30 @@
-var MongoClient = require('mongodb').MongoClient;
-var ObjectId = require('mongodb').ObjectID;
+const mongoose = require('mongoose');
+const User =require('../Models/user');
+mongoose.connect("mongodb://localhost:27017/MovieApp");
 
-var url = "mongodb://localhost:27017/";   
-var Database = "MovieApp";
-const express = require('express');
-var Collection = "users";
-const User = require("../Modals/userSchema");
+module.exports.GetAllUsers= async (req,res)=> {
+    
+var Users = await User.find();
+res.send(Users);
 
-const router= express.Router()
-
+};
 
 
-module.exports.Test=(req,res)=>{
+module.exports.Create= async (req,res)=> {
+    
+  var Users = await User.create(req.body);
+  console.log("Created");
+  res.send(Users);
+  
+  };
 
-  res.send('Success');
-}
-
-module.exports.Login=(req,res)=>{
-      var id = req.params.id;
-      var SearchObject = req.body;
+module.exports.Login=async (req,res)=>{
+ 
+    var SearchObject = req.body;
     console.log(SearchObject);
-     
-      MongoClient.connect(url, function(err, db) {
-         if (err) throw err;
-         var dbo = db.db(Database);
-         var myquery = SearchObject;
-         dbo.collection(Collection).find({}).toArray(function(err, result) {
-            if (err) throw err;
-            
-            console.log(result);
-            res.statusCode = 200;
-            res.send(result);
-            db.close();
-         });
-       });
+    var user = await User.findOne(SearchObject);
+  
+      if(user) {res.statusCode = 200;res.send(user);}
+      else return res.send(null);
 }
   

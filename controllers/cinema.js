@@ -72,7 +72,13 @@ module.exports.GetAvailableSeats =async(req,res)=>{
 
 
 module.exports.GetCinemaByID=async(req,res)=>{
-    var id= req.params.id;
-    res.send(await Cinema.findById(id));
-  
+  var id= req.params.id;
+  res.send(await Cinema.findById(id));
+
+}
+
+module.exports.GetAudiByCinemaID=async(req,res)=>{
+  var id= req.params.id;
+  res.send(await Cinema.findById(id).audis);
+
 }

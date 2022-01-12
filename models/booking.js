@@ -33,6 +33,10 @@ const bookingSchema=new mongoose.Schema({
     slot:{
         type:String,
         required:true
+    },
+    audi:{
+        type:String,
+        required:true
     }
     
 });

@@ -11,9 +11,13 @@ app.use(express.json());
 const bookings= require('./Routes/bookings');
 //const users= require('./Controllers/userController');
 const cinemas= require('./Routes/cinemas');
+
+
 app.use("/cinema",cinemas);
 
 app.use("/booking",bookings);
+
+
 
 console.log('Server is Online');
 app.listen(5000);

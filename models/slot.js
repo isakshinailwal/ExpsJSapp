@@ -13,6 +13,9 @@ const showSchema=new mongoose.Schema({
     },
     bookedSeats:{
         type:[String]
+    },
+    date:{
+        type:Date
     }
     
 });

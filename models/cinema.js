@@ -20,14 +20,15 @@ const cinemaSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    audis:[{
+        type:String,
+        required:true
+    }],
     slots:[{
         type:Schema.Types.ObjectId,
         ref:"Slot"
-    }],
-    slot:{
-        type:[String],
-        required:true
-    }
+    }]
+  
 
 })
 

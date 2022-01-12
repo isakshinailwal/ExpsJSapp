@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 router.get("/getSlotsByCinema/:cinemaID",slotController.getSlotsByCinema);
-router.post("/create/",slotController.createSlot);
+router.post("/create",slotController.createSlot);
 router.get("/getMoviesByCinema/:cinemaID",slotController.getMoviesByCinema);
 
 module.exports = router;

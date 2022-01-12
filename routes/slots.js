@@ -1,9 +1,11 @@
 const express = require('express');
-var bookingController=require('../Controllers/slot')
+var bookingController=require('../controllers/slot')
 
 const router= express.Router();
 
 
-router.get("/GetMovieBySlot/:CinemaID",slotController.GetMovieBySlot);
-router.get("/GetSlotsByCinema/:CinemaID",slotController.GetSlotsByCinema);
-router.get("/GetMoviesByCinema/:CinemaID",slotController.GetMoviesByCinema);
+router.get("/getMovieBySlot/:cinemaID",slotController.getMovieBySlot);
+router.get("/getSlotsByCinema/:cinemaID",slotController.getSlotsByCinema);
+router.get("/getMoviesByCinema/:cinemaID",slotController.getMoviesByCinema);
+
+module.exports = router;

@@ -1,23 +1,20 @@
 const mongoose=require('mongoose');
-const Booking = require('../Models/booking');
-mongoose.connect("mongodb://localhost:27017/MovieApp");
+const Booking = require('../models/booking');
 
 
-module.exports.GetAllBookings=async(req,res)=>{
-
-
+module.exports.getAllBookings=async(req,res)=>{
 res.send(await Booking.find({}));
 
  };
 
-module.exports.GetBookingByID=async(req,res)=>{
-    var id= req.params.id;
+module.exports.getBookingByID=async(req,res)=>{
+    let id= req.params.id;
     res.send(await Booking.findById(id));
 }
 
-module.exports.CreateBooking=async(req,res)=>{
-    var record = req.body;
-    var Result = await Booking.create(record);
+module.exports.createBooking=async(req,res)=>{
+    let record = req.body;
+    let Result = await Booking.create(record);
     res.send(Result);
 };
 

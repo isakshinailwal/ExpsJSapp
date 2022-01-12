@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const path = express.Router();
+const mongoose = require('mongoose');
+mongoose.connect("mongodb://localhost:27017/MovieApp");
 
-var cors = require('cors');
+let cors = require('cors');
 app.use(cors());
 app.use(express.json());
 

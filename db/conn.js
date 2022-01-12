@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const url = "mongodb://localhost/MovieApp";
 
 mongoose.connect(url, {

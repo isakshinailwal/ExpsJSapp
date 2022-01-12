@@ -1,16 +1,16 @@
 
 const express = require('express');
-var cinemaController=require('../Controllers/cinema')
+var cinemaController=require('../controllers/cinema')
 
 const router= express.Router()
 
 
-router.get("/all",cinemaController.GetAllCinemas);
-router.get("/GetCinemaListInCity/:City",cinemaController.GetCinemaListInCity);
-router.get("/GetBookedSeats/:CinemaID",cinemaController.GetBookedSeats);
-router.get("/GetAvailableSeats/:CinemaID",cinemaController.GetAvailableSeats);
-router.get("/GetCinemaByID/:id",cinemaController.GetCinemaByID);
-router.get("/GetAudiByCinemaID/:id",cinemaController.GetCinemaByID);
+router.get("/all",cinemaController.getAllCinemas);
+router.get("/getCinemaListInCity/:city",cinemaController.getCinemaListInCity);
+router.get("/getBookedSeats/:cinemaID",cinemaController.getBookedSeats);
+router.get("/getAvailableSeats/:cinemaID",cinemaController.getAvailableSeats);
+router.get("/getCinemaByID/:id",cinemaController.getCinemaByID);
+router.get("/getAudiByCinemaID/:id",cinemaController.getCinemaByID);
 
 
-module.exports =router
+module.exports =router;

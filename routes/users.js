@@ -3,8 +3,8 @@ const userController = require('../Controllers/user');
 
 const router= express.Router();
 
-router.get("/",userController.GetAllUsers);
-router.post("/create",userController.Create);
+router.get("/",userController.getAllUsers);
+router.post("/create",userController.create);
 
 
 

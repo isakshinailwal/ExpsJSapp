@@ -7,9 +7,8 @@ router.get("/",cinemaController.getAllCinemas);
 router.get("/getCinemaListInCity/:city",cinemaController.getCinemaListInCity);
 router.get("/getBookedSeats/:cinemaID",cinemaController.getBookedSeats);
 router.get("/getAvailableSeats/:cinemaID",cinemaController.getAvailableSeats);
-router.get("/getCinemaByID/:id",cinemaController.getCinemaByID);
-router.get("/getAudiByCinemaID/:id",cinemaController.getCinemaByID);
-router.post("/create",cinemaController.create);
+router.get("/:id",cinemaController.getCinemaByID);
+router.post("/",cinemaController.create);
 
 
 

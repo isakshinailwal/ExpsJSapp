@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const User =require('../Models/user');
+const User =require('../models/user');
 
 
 module.exports.getAllUsers= async (req,res)=> {

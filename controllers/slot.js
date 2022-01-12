@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const Booking = require('../Models/booking');
-const Cinema = require('../Models/cinema');
+const Booking = require('../models/booking');
+const Cinema = require('../models/cinema');
 
 
 module.exports.getMovieBySlot = (req,res)=> {

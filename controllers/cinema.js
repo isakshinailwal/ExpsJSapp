@@ -80,3 +80,9 @@ module.exports.getAudiByCinemaID=async(req,res)=>{
   res.send(await Cinema.findById(id).audis);
 
 }
+
+
+module.exports.create  = (req,res)=> {
+
+  res.send('Success');
+}

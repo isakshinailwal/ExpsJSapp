@@ -3,16 +3,12 @@ const Booking = require('../models/booking');
 const Cinema = require('../models/cinema');
 
 
-
-module.exports.getSlotsByCinema = (req,res)=> {
-
-    res.send('Success');
-}
-module.exports.getMoviesByCinema = (req,res)=> {
+module.exports.getScreen = (req,res)=> {
 
     res.send('Success');
 }
-module.exports.createSlot  = (req,res)=> {
+
+module.exports.createScreen  = (req,res)=> {
 
     res.send('Success');
 }

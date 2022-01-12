@@ -34,7 +34,7 @@ const bookingSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    audi:{
+    screen:{
         type:String,
         required:true
     }

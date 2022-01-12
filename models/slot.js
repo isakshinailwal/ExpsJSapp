@@ -1,18 +1,13 @@
 const mongoose = require("mongoose"),
 ObjectId = mongoose.Types.ObjectId;
 
-const showSchema=new mongoose.Schema({
-    cinemaID:{
-        type:String 
-    },
+const showSchema = new mongoose.Schema({
+    
     movieID:{
         type:String 
     },
     slotTime:{
-        type:String 
-    },
-    bookedSeats:{
-        type:[String]
+        type:Date 
     },
     date:{
         type:Date

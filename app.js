@@ -10,14 +10,19 @@ app.use(express.json());
 
 
 // -------- Adding Routings / Controllers
-const bookings= require('./Routes/bookings');
-//const users= require('./Controllers/userController');
-const cinemas= require('./Routes/cinemas');
+const bookingRouter= require('./routes/bookings');
+const cinemaRouter= require('./routes/cinemas');
+const slotRouter= require('./routes/slots');
+const screenRouter= require('./routes/screens');
+const userRouter= require('./routes/users');
 
 
-app.use("/cinema",cinemas);
+app.use("/cinema",cinemaRouter);
+app.use("/booking",bookingRouters);
+app.use("/slot",slots);
+app.use("/screen",screens);
+app.use("/user",users);
 
-app.use("/booking",bookings);
 
 
 

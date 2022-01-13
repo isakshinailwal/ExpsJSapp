@@ -1,7 +1,7 @@
 const mongoose = require("mongoose"),
 ObjectId = mongoose.Types.ObjectId;
 
-const showSchema = new mongoose.Schema({
+const slotSchema = new mongoose.Schema({
     
     movieID:{
         type:String 

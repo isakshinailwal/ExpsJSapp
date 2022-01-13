@@ -16,7 +16,7 @@ module.exports.createBooking = async(req,res)=> {
     let Result = await Booking.create(record);
     res.send(Result);
 };
-module.exports.delete  = (req,res)=> {
+module.exports.deleteBooking  =async (req,res)=> {
 
     res.send('Success');
 }

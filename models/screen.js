@@ -1,6 +1,8 @@
 const mongoose = require("mongoose"),
 ObjectId = mongoose.Types.ObjectId;
 const { Schema }= mongoose.Schema;
+const slotSchema = require("./slot");
+
 
 const screenSchema = new mongoose.Schema({
     screenName:{
@@ -12,6 +14,7 @@ const screenSchema = new mongoose.Schema({
         type: Schema.Types.ObjectId, 
         ref: 'Slot'
     }]
+    
    
 })
 

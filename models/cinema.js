@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+const screenSchema = require("./screen");
+
 const cinemaSchema=new mongoose.Schema({
     cinemaName:{
         type:String,

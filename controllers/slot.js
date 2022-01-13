@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const Booking = require('../models/booking');
 const Cinema = require('../models/cinema');
+const Screen = require('../models/screen');
+const Slot = require('../models/slot');
 
 
 

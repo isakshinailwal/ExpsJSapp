@@ -47,10 +47,9 @@ module.exports.getAvailableSeats =async(req,res)=>{
    var Bookings=null;
    
    var Bookings = await Booking.find({"Cinema":CinemaID});
-    
    
-  
-   for(var n=0;n<Bookings.length;n++)
+
+    for(var n=0;n<Bookings.length;n++)
     {
      Bookings[n].Seats.forEach(function(item, index){BookedSeats.push(item);});
     }

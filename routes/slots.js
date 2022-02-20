@@ -1,11 +1,14 @@
 const express = require('express');
-const bookingController = require('../controllers/slot');
+const slotController = require('../controllers/slot');
 
 const router = express.Router();
 
 
-router.get("/getSlotsByCinema/:cinemaID",slotController.getSlotsByCinema);
-router.post("/",slotController.createSlot);
-router.get("/getMoviesByCinema/:cinemaID",slotController.getMoviesByCinema);
-
+router.get("/getSlotsByCinemaID/:id",slotController.getSlotsByCinemaID);
+router.post("/create",slotController.create);
+router.get("/getMoviesByCinemaID/:cinemaID",slotController.getMoviesByCinemaID);
+router.delete("/:id",slotController.delete);
+router.get("/:id",slotController.getSlotByID);
+router.get("/getSlotsByMovieID/:id",slotController.getSlotsByMovieID);
+//
 module.exports = router;

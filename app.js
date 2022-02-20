@@ -17,11 +17,11 @@ const screenRouter= require('./routes/screens');
 const userRouter= require('./routes/users');
 
 
-app.use("/cinema",cinemaRouter);
-app.use("/booking",bookingRouters);
-app.use("/slot",slots);
-app.use("/screen",screens);
-app.use("/user",users);
+app.use("/cinemas",cinemaRouter);
+app.use("/bookings",bookingRouter);
+app.use("/slots",slotRouter);
+app.use("/screens",screenRouter);
+app.use("/users",userRouter);
 
 
 

@@ -3,15 +3,12 @@ ObjectId = mongoose.Types.ObjectId;
 
 const slotSchema = new mongoose.Schema({
     
-    movieID:{
-        type:String 
-    },
-    slotTime:{
-        type:Date 
-    },
-    date:{
-        type:Date
-    }
+    movieID:{type:String},
+    slotTime:{type:String },
+    screen:{type:String},
+    cinema:{type:Object},
+    cinemaID:{type:String}
+    
     
 });
 

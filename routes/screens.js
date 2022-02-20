@@ -1,10 +1,10 @@
 const express = require('express');
-const bookingController = require('../controllers/screen')
+const screenController = require('../controllers/screen')
 
 const router = express.Router();
 
 
 router.post("/",screenController.createScreen);
-router.get("/:id",screenController.getScreen);
+router.get("/",screenController.getAllScreens);
 
 module.exports = router;

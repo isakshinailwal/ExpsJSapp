@@ -4,8 +4,8 @@ const User =require('../models/user');
 
 module.exports.getAllUsers= async (req,res)=> {
     
-let Users = await User.find();
-res.send(Users);
+  let Users = await User.find();
+  res.send(Users);
 
 };
 
@@ -27,8 +27,14 @@ module.exports.login=async (req,res)=>{
       if(user) 
       {
         res.statusCode = 200;
-        res.send(user);}
-      else 
-       return res.send(null);
+        res.send(user);
+      }
+        else return res.send(null);
+}
+module.exports.delete =async (req,res)=> {
+console.log('Delete');
+  let id = req.params.ID;
+  var Result= await User.deleteOne({ _id: id });
+  res.send(Result);
 }
   
